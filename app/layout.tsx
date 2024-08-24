@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import DotPattern from "@/components/magicui/dot";
+import { FloatingDock } from "@/components/aceternity/floating-dock";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn(inter.className, "bg-black h-screen")}>
+        {children}
+        <DotPattern className="-z-10"/>
+      </body>
     </html>
   );
 }
