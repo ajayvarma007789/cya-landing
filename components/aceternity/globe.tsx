@@ -267,6 +267,7 @@ export function World(props: WorldProps) {
       <OrbitControls
         enablePan={false}
         enableZoom={false}
+        enableRotate={false}
         minDistance={cameraZ}
         maxDistance={cameraZ}
         autoRotateSpeed={1}
