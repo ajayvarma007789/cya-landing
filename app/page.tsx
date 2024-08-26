@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+import {CardHoverEffectDemo} from "./vision/vision";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
+import { Pixelify_Sans } from "next/font/google";
 
 const fearFont = localFont({
   src: "./FEARLogo-Regular.ttf",
@@ -13,6 +14,24 @@ const fearFont = localFont({
 const World = dynamic(() => import("@/components/aceternity/globe").then((m) => m.World), {
   ssr: false,
 });
+
+  const words = [
+    {
+      text: "Build",
+    },
+    {
+      text: "awesome",
+    },
+    {
+      text: "apps",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "Aceternity.",
+    },
+  ];
 
 export default function Home() {
   const globeConfig = {
@@ -389,6 +408,7 @@ export default function Home() {
       arcAlt: 0.3,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
+    
   ];
   return (
     <main className="flex flex-col w-full h-screen overflow-scroll">
@@ -396,19 +416,22 @@ export default function Home() {
 
       </nav>
       <section className="flex flex-col w-full items-center p-7 gap-7 max-h-screen overflow-clip">
-        <h1 className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl", fearFont.className)}>
+        <h1 className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl z-10", fearFont.className)}>
           COMPUTER SCIENCE<br/> AND CYBER SECURITY
         </h1>
-        <div className="w-[900px] aspect-square relative bottom-36 z-0">
-          <World data={sampleArcs} globeConfig={globeConfig}/>
-        </div>
+          <div className="w-[900px] aspect-square relative bottom-36 z-0">
+            <World data={sampleArcs} globeConfig={globeConfig}/>
+          </div>
         <div>
           
         </div>
       </section>
-      <section className="flex flex-col w-full items-center p-7 gap-7 max-h-screen overflow-clip">
-        <h1 className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl", fearFont.className)}>ABOUT</h1>
+      <section className="flex flex-col w-full items-center p-7 m-2 gap-7 max-h-screen overflow-clip">
+        <h1 className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl z-10", fearFont.className)}>ABOUT</h1>
+        <h1 className={cn("text-neutral-300 text-center font-bold text-lg my-2 md:text-3xl  z-10", fearFont.className)}>DEPARTMENT</h1>
+        <CardHoverEffectDemo/>
       </section>
+      
     </main>
   );
 }
