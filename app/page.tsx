@@ -6,10 +6,17 @@ import {CardHoverEffectDemo} from "./vision/vision";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 import { Pixelify_Sans } from "next/font/google";
+import { VT323 } from 'next/font/google'
+import { global } from "styled-jsx/css";
 
 const fearFont = localFont({
   src: "./FEARLogo-Regular.ttf",
 })
+
+const fearvt23 = localFont({
+  src: "./VT323-Regular.ttf",
+})
+
  
 const World = dynamic(() => import("@/components/aceternity/globe").then((m) => m.World), {
   ssr: false,
@@ -411,7 +418,7 @@ export default function Home() {
     
   ];
   return (
-    <main className="flex flex-col w-full h-screen overflow-scroll">
+    <main className="flex flex-col w-full h-screen overflow-scroll no-scrollbar">
       <nav className="flex flex-row p-5">
 
       </nav>
