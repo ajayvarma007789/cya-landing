@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import {CardHoverEffectDemo} from "./vision/vision";
+import {CardHoverEffectDemo} from "./pages/vision";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 import { Pixelify_Sans } from "next/font/google";
-
+import Achieve from "./pages/achieve";
 const fearFont = localFont({
   src: "./FEARLogo-Regular.ttf",
 })
@@ -430,8 +430,13 @@ export default function Home() {
         <h1 className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl z-10", fearFont.className)}>ABOUT</h1>
         <h1 className={cn("text-neutral-300 text-center font-bold text-lg my-2 md:text-3xl  z-10", fearFont.className)}>DEPARTMENT</h1>
         <CardHoverEffectDemo/>
+       
       </section>
-      
+      <section className="flex flex-col w-full items-center p-7 m-2 gap-7 max-h-screen overflow-clip">
+        <h1 className={cn("text-neutral-300 text-center font-bold text-lg my-2 md:text-3xl  z-10", fearFont.className)}>Achievements</h1>
+        <Achieve/>
+       
+      </section>
     </main>
   );
 }

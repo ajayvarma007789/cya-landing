@@ -39,8 +39,8 @@ export default function ImageSlider({ autoplay = true, reverse = true,images }:I
       >
        {images.map((image, index) => (
             <SwiperSlide key={index}>
-            <img src={image} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
-          </SwiperSlide>
+              <img src={image} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+            </SwiperSlide>
        ))}
       </Swiper>
     </>
