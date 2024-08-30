@@ -44,7 +44,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={cn("z-50 fixed top-0 pt-4 w-full bg-black border-transparent flex justify-between items-center text-center text-2xl nav", fearvt23.className)}>
+    <div className={cn("z-50 fixed top-0 pt-4 w-full bg-transparent border-transparent flex justify-between items-center text-center text-2xl nav", fearvt23.className)}>
       <div>
       
 

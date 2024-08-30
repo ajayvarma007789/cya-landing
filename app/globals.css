@@ -69,9 +69,9 @@
 
 }
 .swiper-slide img {
-    @apply md:w-[30vw] md:mb-14 mb-16 w-[90vw] object-cover transition-all duration-700 mx-auto my-10;
+    @apply md:w-[30vw] md:mb-0 mb-16 w-[90vw] object-cover transition-all duration-700 mx-auto my-10;
   }
-}
+
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
