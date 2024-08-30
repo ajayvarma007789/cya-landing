@@ -10,7 +10,7 @@ function Achieve() {
     ]
   return (
     <div >
-        <ImageSlider images={img} autoplay={true} reverse={false}/>
+        <ImageSlider images={img} reverse={false}/>
     </div>
   )
 }
