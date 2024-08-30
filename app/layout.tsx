@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import DotPattern from "@/components/magicui/dot";
 import { FloatingDock } from "@/components/aceternity/floating-dock";
+import Navbar from '../components/navbar/nav';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(inter.className, "bg-black h-screen")}>
+      <Navbar/>
         {children}
         <DotPattern className="-z-10"/>
       </body>

@@ -66,7 +66,20 @@
   body {
     @apply bg-background text-foreground;
   }
+
 }
 .swiper-slide img {
     @apply md:w-[30vw] md:mb-14 mb-16 w-[90vw] object-cover transition-all duration-700 mx-auto my-10;
   }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
