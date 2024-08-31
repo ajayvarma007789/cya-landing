@@ -422,7 +422,7 @@ export default function Home() {
       <nav className="flex flex-row p-5">
 
       </nav>
-      <section className="flex flex-col w-full items-center p-7 gap-7 max-h-screen overflow-clip">
+      <section id="home"  className="flex flex-col w-full items-center p-7 gap-7 max-h-screen overflow-clip">
         <h1 className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl z-10", fearFont.className)}>
           COMPUTER SCIENCE<br/> AND CYBER SECURITY
         </h1>
@@ -433,11 +433,12 @@ export default function Home() {
           
         </div>
       </section>
-      <section className="flex flex-col w-full items-center p-3 m-2 gap-2 min-h-[110vh] md:min-h-[80vh] overflow-clip">
-        <h1 className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl z-10", fearFont.className)}>ABOUT</h1>
+      <section id="about" className="flex flex-col w-full items-center justify-center p-3 m-2 gap-2 min-h-[110vh] md:min-h-[100vh] overflow-clip">
+        <div>
+        <h1  className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl z-10", fearFont.className)}>ABOUT</h1>
         <h1 className={cn("text-neutral-300 text-center font-bold text-lg my-2 md:text-3xl  z-10", fearFont.className)}>DEPARTMENT</h1>
         <CardHoverEffectDemo/>
-       
+        </div>
       </section>
       <section className="flex flex-col w-full items-center p-7 m-2 gap-7 max-h-screen overflow-clip">
         <h1 className={cn("text-neutral-300 text-center font-bold text-lg my-2 md:text-3xl  z-10", fearFont.className)}>Achievements</h1>

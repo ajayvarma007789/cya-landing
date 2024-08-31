@@ -82,4 +82,7 @@
     scrollbar-width: none;
   }
 }
+.swiper-slide-next, .swiper-slide-prev {
+    @apply opacity-50;
+  }
 
