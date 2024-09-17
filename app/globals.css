@@ -67,12 +67,11 @@
     @apply bg-background text-foreground;
   }
 
-  .vt323-regular {
-    font-family: "VT323", monospace;
-    font-weight: 400;
-    font-style: normal;
-  }
 }
+.swiper-slide img {
+    @apply md:w-[30vw] md:mb-0 mb-16 w-[90vw] object-cover transition-all duration-700 mx-auto my-10;
+  }
+
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
@@ -83,3 +82,7 @@
     scrollbar-width: none;
   }
 }
+.swiper-slide-next, .swiper-slide-prev {
+    @apply opacity-50;
+  }
+
