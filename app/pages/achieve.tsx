@@ -1,6 +1,6 @@
 import React from 'react'
 import ImageSlider from '@/components/ui/swiper'
-function Achieve() {
+function Achieve(){
     const img = [
         '/achievements/raju.webp',
         '/achievements/ashin.webp',

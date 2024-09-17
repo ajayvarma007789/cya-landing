@@ -7,8 +7,12 @@ import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 import { Pixelify_Sans } from "next/font/google";
 import Achieve from "./pages/achieve";
+import Events from "./pages/events";
 import { VT323 } from 'next/font/google'
 import { global } from "styled-jsx/css";
+import { SwiperSlide } from "swiper/react";
+import { VelocityScroll } from "../components/magicui/VelocityScroll";
+
 const fearFont = localFont({
   src: "./FEARLogo-Regular.ttf",
 })
@@ -419,14 +423,11 @@ export default function Home() {
   ];
   return (
     <main className="flex flex-col w-full h-screen overflow-y-scroll overflow-x-hidden no-scrollbar">
-      <nav className="flex flex-row p-5">
-
-      </nav>
-      <section id="home"  className="flex flex-col w-full items-center p-7 gap-7 max-h-screen overflow-clip">
+      <section id="home"  className="flex flex-col w-full items-center p-20 gap-7 max-h-screen overflow-clip">
         <h1 className={cn("text-neutral-300 text-center font-bold text-4xl md:text-6xl z-10", fearFont.className)}>
           COMPUTER SCIENCE<br/> AND CYBER SECURITY
         </h1>
-          <div className="w-[900px] aspect-square relative bottom-36 z-0">
+          <div className="w-[900px] aspect-square relative bottom-32 z-0">
             <World data={sampleArcs} globeConfig={globeConfig}/>
           </div>
         <div>
@@ -440,10 +441,17 @@ export default function Home() {
         <CardHoverEffectDemo/>
         </div>
       </section>
+      <VelocityScroll text="Lorem Ipsum" default_velocity={2} className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-white drop-shadow-sm md:text-6xl md:leading-[5rem]"/>
       <section className="flex flex-col w-full items-center p-7 m-2 gap-7 max-h-screen overflow-clip">
-        <h1 className={cn("text-neutral-300 text-center font-bold text-lg my-2 md:text-3xl  z-10", fearFont.className)}>Achievements</h1>
+        <h1 className={cn("text-neutral-300 text-center font-bold text-2xl my-2 md:text-3xl  z-10", fearFont.className)}>Achievements</h1>
         <div className="w-[96vw] transition-all">
         <Achieve/>
+        </div>
+      </section>
+      <section className="flex flex-col w-full items-center p-7 m-2 gap-7 max-h-screen overflow-clip">
+        <h1 className={cn("text-neutral-300 text-center font-bold text-lg my-2 md:text-3xl  z-10", fearFont.className)}>EVENTS AND WORKSHOPS</h1>
+        <div className="w-[96vw] transition-all">
+        <Events/>
         </div>
       </section>
     </main>
